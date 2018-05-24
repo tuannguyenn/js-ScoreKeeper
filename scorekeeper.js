@@ -1,6 +1,10 @@
 var p1score = 0;
 var p2score = 0;
 
+function isNumberKey(evt){
+    var charCode = (evt.which) ? evt.which : event.keyCode;
+    return !(charCode > 31 && (charCode < 48 || charCode > 57));
+}
 
 function playingTo(){
     var x = document.getElementById("playingToInput").value;
